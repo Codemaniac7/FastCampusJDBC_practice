@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    implementation 'org.springframework:spring-jdbc:5.3.24'
+
+    testImplementation 'org.assertj:assertj-core:3.16.1'
+    implementation 'com.mysql:mysql-connector-j:8.0.33'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
